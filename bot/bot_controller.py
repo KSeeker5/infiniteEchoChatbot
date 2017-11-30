@@ -177,18 +177,23 @@ class BotController:
                              ' If you decide to align yourself with the misguided Gort, you will find' + 
                              ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
                              ' say something to me. Who knows what will happen in your new reality. \n')
-    elif used_any(BotController.COPYPASTA_WORDS) or decision_RNG%2 == 0:
-      num_of_copypastas = randint(1, 49) #Pick a random number between 1 and 49
+    elif used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 3:
+      num_of_copypastas = randint(1, 50) #Pick a random number between 1 and 49
+      num_of_marker = randint(1,num_of_copypastas)
       msg_to_send['text'] = ''
       copypasta_counter = 0
       while copypasta_counter<num_of_copypastas:
         #copypasta_number = randint(0, len(COPYPASTA_VALUES)-1)    # Pick a random number between 0 and length of copypasta array (minus 1)
         #copypasta_number = randint(0, 1)    # Pick a random number between 0 and length of copypasta array (minus 1)
         #generated_copypasta = COPYPASTA_VALUES[copypasta_number]
-        msg_to_send['text'] += choice(BotController.COPYPASTA_VALUES) #generated_copypasta
+        if (copypasta_counter == num_of_marker)
+          msg_to_send['text'] += 'Rod5oLLEmpZ9h4ifAKnT'
+        else
+          msg_to_send['text'] += choice(BotController.COPYPASTA_VALUES) #generated_copypasta
         msg_to_send['text'] += '\n\n'
         #msg_to_send['text'] += 'a'
         copypasta_counter+=1
+      #msg_to_send['text'] += 'Rod5oLLEmpZ9h4ifAKnT'
     else:
       msg_to_send['text'] = 'What nonsense is this you are spouting?'
 
