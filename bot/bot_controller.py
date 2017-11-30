@@ -178,7 +178,7 @@ class BotController:
                              ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
                              ' say something to me. Who knows what will happen in your new reality. \n')
     elif used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 3:
-      num_of_copypastas = randint(1, 49) #Pick a random number between 1 and 49
+      num_of_copypastas = randint(1, 50) #Pick a random number between 1 and 49
       num_of_marker = randint(1,num_of_copypastas)
       msg_to_send['text'] = ''
       copypasta_counter = 0
