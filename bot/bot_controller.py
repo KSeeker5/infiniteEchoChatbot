@@ -31,7 +31,7 @@ class BotController:
   OH_WORDS       = ['~office hours~', '~oh~']
   GREETING_WORDS = ['hello infinite', 'hello there', 'hi there', 'hi infinite', 'hey there', 'hey infinite', 'what\'s up', 'whats up'] 
   HELP_WORDS     = ['infinite help', 'help infinite', 'you do?', 'are you']
-  BOIS_WORDS     = ['food bois']
+  BOIS_WORDS     = ['food bois', 'psa:']
   
   COPYPASTA_WORDS = [
     'copypasta', 'meme', 'gort',
