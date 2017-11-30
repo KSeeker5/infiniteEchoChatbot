@@ -29,8 +29,8 @@ class BotController:
     }
 
   OH_WORDS       = ['office hours', 'oh']
-  GREETING_WORDS = ['hello', 'hi', 'hey'] 
-  HELP_WORDS     = ['help', 'you do?', 'who']
+  GREETING_WORDS = [' hello ', ' hi ', ' hey '] 
+  HELP_WORDS     = [' help ', ' you do?', ' who ']
   
   COPYPASTA_WORDS = [
     'copypasta', 'meme', 'gort', 'Gort',
