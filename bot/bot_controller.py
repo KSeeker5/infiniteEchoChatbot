@@ -170,7 +170,7 @@ class BotController:
     decision_RNG = randint(1,10)
     #if 'when' in text and used_any(BotController.OH_WORDS):
       #msg_to_send['text'] = 'You\'re asking about someone\'s office hours!'
-    elif used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 3:
+    if used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 3:
       num_of_copypastas = randint(1, 50) #Pick a random number between 1 and 50
       if (randint(1,20)>15):
         num_of_marker = randint(1,num_of_copypastas)
