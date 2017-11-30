@@ -68,6 +68,7 @@ class BotController:
     used_any = lambda word_list: any(map(lambda x : x in text, word_list))
 
     # Use some hard-coded rules to decide what this message says
+    decision_RNG = randint(1,10)
     #if 'when' in text and used_any(BotController.OH_WORDS):
       #msg_to_send['text'] = 'You\'re asking about someone\'s office hours!'
     if used_any(BotController.GREETING_WORDS):
@@ -77,7 +78,7 @@ class BotController:
                              ' If you decide to align yourself with the misguided Gort, you will find' + 
                              ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
                              ' say something to me. Who knows what will happen in your new reality. \n')
-    elif used_any(BotController.COPYPASTA_WORDS):
+    elif used_any(BotController.COPYPASTA_WORDS) or decision_RNG%2 == 0:
       num_of_copypastas = randint(1, 5) #Pick a random number between 1 and 5
       msg_to_send['text'] = ''
       copypasta_counter = 0
