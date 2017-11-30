@@ -28,9 +28,9 @@ class BotController:
       'Floryan'    : 'at an unknown time',
     }
 
-  OH_WORDS       = ['office hours', 'oh']
-  GREETING_WORDS = ['hello', 'hi', 'hey', 'what\'s up', 'whats up'] 
-  HELP_WORDS     = ['help', 'you do?', 'are you']
+  OH_WORDS       = ['~office hours~', '~oh~']
+  GREETING_WORDS = ['hello infinite', 'hello there', 'hi there', 'hi infinite', 'hey there', 'hey infinite', 'what\'s up', 'whats up'] 
+  HELP_WORDS     = ['infinite help', 'help infinite', 'you do?', 'are you']
   
   COPYPASTA_WORDS = [
     'copypasta', 'meme', 'gort',
@@ -175,7 +175,7 @@ class BotController:
                              ' If you decide to align yourself with the misguided Gort, you will find' + 
                              ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
                              ' say something to me. Who knows what will happen in your new reality. \n')
-    elif (used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 6) and (not used_any(BotController.GREETING_WORDS)):
+    elif (used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 8) and (not used_any(BotController.GREETING_WORDS)):
       num_of_copypastas = randint(1, 30) #Pick a random number between 1 and 30 *MAX 50*
       if (randint(1,20)>15):
         num_of_marker = randint(1,num_of_copypastas)
