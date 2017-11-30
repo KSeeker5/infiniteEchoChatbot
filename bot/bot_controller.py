@@ -175,7 +175,7 @@ class BotController:
                              ' If you decide to align yourself with the misguided Gort, you will find' + 
                              ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
                              ' say something to me. Who knows what will happen in your new reality. \n')
-    elif used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 3:
+    elif (used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 6) and !(used_any(BotController.GREETING_WORDS)):
       num_of_copypastas = randint(1, 50) #Pick a random number between 1 and 50
       if (randint(1,20)>15):
         num_of_marker = randint(1,num_of_copypastas)
