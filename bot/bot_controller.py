@@ -34,7 +34,7 @@ class BotController:
   
   COPYPASTA_WORDS = [
     'copypasta', 'meme', 'gort', 'Gort',
-    'test', 'Z9h'
+    'test', 'z9h'
     ]
   
   COPYPASTA_VALUES = [
