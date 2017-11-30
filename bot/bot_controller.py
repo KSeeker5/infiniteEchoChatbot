@@ -29,7 +29,7 @@ class BotController:
     }
 
   OH_WORDS       = ['office hours', 'oh']
-  GREETING_WORDS = ['hello', 'hi', 'what\'s up'] 
+  GREETING_WORDS = ['hello', 'hi', 'hey'] 
   HELP_WORDS     = ['help', 'you do?', 'who']
   
   COPYPASTA_WORDS = [
