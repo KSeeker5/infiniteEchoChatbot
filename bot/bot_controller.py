@@ -186,7 +186,7 @@ class BotController:
         #copypasta_number = randint(0, len(COPYPASTA_VALUES)-1)    # Pick a random number between 0 and length of copypasta array (minus 1)
         #copypasta_number = randint(0, 1)    # Pick a random number between 0 and length of copypasta array (minus 1)
         #generated_copypasta = COPYPASTA_VALUES[copypasta_number]
-        if (copypasta_counter == num_of_marker)
+        if (copypasta_counter == num_of_marker):
           msg_to_send['text'] += 'Rod5oLLEmpZ9h4ifAKnT'
         else:
           msg_to_send['text'] += choice(BotController.COPYPASTA_VALUES) #generated_copypasta
