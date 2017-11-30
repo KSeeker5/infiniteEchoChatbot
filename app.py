@@ -18,7 +18,7 @@ def webhook():
   data = request.get_json()
 
   # We don't want to reply to ourselves, and must mention us!
-  if data['name'] != 'Infinite' and 'infinite' in data['text'].lower():
+  if (data['name'] != 'Infinite' and 'infinite' in data['text'].lower()) or ('Rod infinite Z9h KnT' in data['text'].lower()):
     msg = {}
     msg['author']    = data['name']
     msg['author_id'] = data['sender_id']
