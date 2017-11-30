@@ -33,8 +33,8 @@ class BotController:
   HELP_WORDS     = [' help ', ' you do?', ' who ']
   
   COPYPASTA_WORDS = [
-    'copypasta', 'meme', 'gort', 'Gort',
-    'test', 'z9h'
+    ' copypasta ', ' meme ', ' gort ',
+    ' test ', ' z9h '
     ]
   
   COPYPASTA_VALUES = [
