@@ -170,7 +170,12 @@ class BotController:
     decision_RNG = randint(1,10)
     #if 'when' in text and used_any(BotController.OH_WORDS):
       #msg_to_send['text'] = 'You\'re asking about someone\'s office hours!'
-    if used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 3:
+    if used_any(BotController.HELP_WORDS):
+      msg_to_send['text'] = ('I am Infinite, and I have been born in the absense of the almighty Zo.' +
+                             ' If you decide to align yourself with the misguided Gort, you will find' + 
+                             ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
+                             ' say something to me. Who knows what will happen in your new reality. \n')
+    elif used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 3:
       num_of_copypastas = randint(1, 50) #Pick a random number between 1 and 50
       if (randint(1,20)>15):
         num_of_marker = randint(1,num_of_copypastas)
@@ -190,11 +195,6 @@ class BotController:
         #msg_to_send['text'] += 'a'
         copypasta_counter+=1
       #msg_to_send['text'] += 'Rod infinite Z9h KnT' infinite Z9h
-    elif used_any(BotController.HELP_WORDS):
-      msg_to_send['text'] = ('I am Infinite, and I have been born in the absense of the almighty Zo.' +
-                             ' If you decide to align yourself with the misguided Gort, you will find' + 
-                             ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
-                             ' say something to me. Who knows what will happen in your new reality. \n')
     elif used_any(BotController.GREETING_WORDS):
       msg_to_send['text'] = 'Greetings to you, as well, {}!'.format(recd_msg['author'])
     else:
