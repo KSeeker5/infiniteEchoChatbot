@@ -31,6 +31,7 @@ class BotController:
   OH_WORDS       = ['~office hours~', '~oh~']
   GREETING_WORDS = ['hello infinite', 'hello there', 'hi there', 'hi infinite', 'hey there', 'hey infinite', 'what\'s up', 'whats up'] 
   HELP_WORDS     = ['infinite help', 'help infinite', 'you do?', 'are you']
+  BOIS_WORDS     = ['food bois']
   
   COPYPASTA_WORDS = [
     'copypasta', 'meme', 'gort',
@@ -175,7 +176,7 @@ class BotController:
                              ' If you decide to align yourself with the misguided Gort, you will find' + 
                              ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
                              ' say something to me. Who knows what will happen in your new reality. \n')
-    elif (used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 8) and (not used_any(BotController.GREETING_WORDS)):
+    elif (used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 8) and ((not used_any(BotController.GREETING_WORDS) or (not used_any(BotController.BOIS_WORDS)))):
       num_of_copypastas = randint(1, 30) #Pick a random number between 1 and 30 *MAX 50*
       if (randint(1,20)>15):
         num_of_marker = randint(1,num_of_copypastas)
@@ -197,6 +198,8 @@ class BotController:
       #msg_to_send['text'] += 'Rod infinite Z9h KnT' infinite Z9h
     elif used_any(BotController.GREETING_WORDS):
       msg_to_send['text'] = 'Greetings to you, as well, {}!'.format(recd_msg['author'])
+    elif used_any(BotController.BOIS_WORDS):
+      msg_to_send['text'] = 'Thanks for the heads-up, {}!'.format(recd_msg['author'])
     else:
       msg_to_send['text'] = 'What nonsense is this you are spouting?'
 
