@@ -29,12 +29,12 @@ class BotController:
     }
 
   OH_WORDS       = ['office hours', 'oh']
-  GREETING_WORDS = [' hello ', ' hi ', ' hey ', 'hi ', 'hey '] 
-  HELP_WORDS     = [' help ', ' you do?', ' who ', 'help ']
+  GREETING_WORDS = ['hello', 'hi', 'hey'] 
+  HELP_WORDS     = ['help', 'you do?', 'who']
   
   COPYPASTA_WORDS = [
-    ' copypasta ', ' meme ', ' gort ',
-    ' test ', ' z9h '
+    'copypasta', 'meme', 'gort',
+    'test', 'z9h'
     ]
   
   COPYPASTA_VALUES = [
@@ -176,7 +176,7 @@ class BotController:
                              ' that I have even less mercy than him. If you\'re curious, go ahead and' + 
                              ' say something to me. Who knows what will happen in your new reality. \n')
     elif (used_any(BotController.COPYPASTA_WORDS) or decision_RNG > 6) and (not used_any(BotController.GREETING_WORDS)):
-      num_of_copypastas = randint(1, 50) #Pick a random number between 1 and 50
+      num_of_copypastas = randint(1, 30) #Pick a random number between 1 and 30 *MAX 50*
       if (randint(1,20)>15):
         num_of_marker = randint(1,num_of_copypastas)
       else:
