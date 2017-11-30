@@ -175,7 +175,7 @@ class BotController:
       if (randint(1,20)>15):
         num_of_marker = randint(1,num_of_copypastas)
       else:
-        num_of_marker = 0
+        num_of_marker = 100
       msg_to_send['text'] = ''
       copypasta_counter = 0
       while copypasta_counter<num_of_copypastas:
